@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="@color/yellow">
+    <TextView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Profile"
+        android:textStyle="bold"
+        android:textAppearance="?attr/textAppearanceTitleLarge"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card2"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    app:layout_constraintTop_toBottomOf="@id/card1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:cardElevation="20dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="16dp"
+    android:backgroundTint="@color/white">
+   <ImageView
+       android:id="@+id/profileEmoji"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/outline_account_box_24"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/ProfileInfo"
+       android:layout_marginStart="20dp"
+       android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/ProfileInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: admin\n\nRole: Shop Owner\n\nEmail: admin@shopsmart.com"
+        android:textAppearance="?attr/textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profileEmoji"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="12dp"
+        />
+
+    <Button
+        android:id="@+id/btnBackHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        app:layout_constraintTop_toBottomOf="@id/ProfileInfo"
+        app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginTop="130dp"
+        android:layout_marginStart="120dp"
+        android:backgroundTint="@color/black"/>
+</com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:layout_constraintTop_toBottomOf="@id/card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginTop="355dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="@color/yellow">
+a
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceTitleLarge"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Stock:"
+        android:textAppearance="?attr/textAppearanceTitleMedium"
+        app:layout_constraintTop_toBottomOf="@id/card3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/title1"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/StockList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apples - 10\n\n\nBananas - 2 (Low)\n\n\nGrapes - 7\n\n\nOrange - 3 (Low)\n\n\nMilk - 1 (Low)\n\n\nBiscuits - 8\n\n\nChips - 11\n\n\nDark Chocolates - 5\n\n\nWhite Chocolates - 5\n\n\nSugar - 4 (Low)\n\n\nSalt - 6\n\n\nTea - 4(Low)\n\n\nBread - 5\n\n\nProcessed Cheese - 3(Low)"
+            android:textSize="16sp"
+            android:padding="10dp" />
+    </ScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/yellow"
+        app:cardCornerRadius="0dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/icon1"
+            android:src="@drawable/outline_accessible_menu_24"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:contentDescription="Home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="50dp"/>
+        <ImageView
+            android:id="@+id/icon2"
+            android:src="@drawable/outline_account_circle_24"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:contentDescription="Profile"
+            app:layout_constraintStart_toEndOf="@id/icon1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="100dp"/>
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:src="@android:drawable/ic_lock_power_off"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:contentDescription="Logout"
+            app:layout_constraintStart_toEndOf="@id/icon2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="90dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+         </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
